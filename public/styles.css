@@ -1,0 +1,77 @@
+.red{
+    color: red;
+}
+.button1{
+    line-height: 16px;
+     width: 200px;
+     font-size: 15pt;
+     font-family: tahoma;
+     margin-top: 55px;
+     margin-right: 25rem;
+     position:absolute;
+     top:0;
+     right:0;
+     border: 0;
+     background-color: white;
+     opacity: 0.35;
+}
+.button1:hover{
+    cursor: pointer;
+}
+
+.Images{
+    margin-top: 0.5rem;
+
+}
+.unread-notification{
+    padding: 0;
+    margin: 0;
+}
+.textAfterImage{
+    margin-left: 7rem;
+    margin-top: -5.5rem;
+    
+}
+.text{
+    opacity: 0.35;
+}
+.group{
+    color: blue;
+    opacity: 0.75;
+    font-weight: bold;
+}
+.image2{
+    margin-left: 32rem;
+    
+    margin-top: -5rem;
+
+
+}
+.message{
+    border-width : 3px;
+    border-color: black;
+    border-style:solid;
+    opacity: 0.35;
+    background-color: lightcyan
+}
+body{
+    
+    display: flex;
+    justify-content: center;
+    background-color: aliceblue;
+    line-height: 2;
+}
+.mainfile{
+    width: 800x;
+    margin-right: 2rem;
+    background-color: white;
+
+    border-radius: 1rem;
+    padding: 1rem ,2rem
+}
+.unread-notification{
+    background-color: lightcyan;
+}
+.read-notification{
+    background-color: white;
+}

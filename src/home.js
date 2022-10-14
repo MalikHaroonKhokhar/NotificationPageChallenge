@@ -13,12 +13,14 @@ import User from './App';
 
 
 export default function Home(){
-  const [count,setCount] = useState(3);  
+  const [count,setCount] = useState(0);  
+      let elem = document.getElementsByClassName("unread-notification");
+
   const handleClick = event => {
 
     
-    event.currentTarget.classList.toggle('read-notification');
-   // event.currentTarget.classList.remove("umread-notifications")
+   // event.currentTarget.classList.toggle('read-notification');
+   event.currentTarget.classList.remove("unread-notification")
    setCount(count -1)
    if(count<=0){
     setCount(0)
@@ -28,12 +30,16 @@ export default function Home(){
   const handleButton =event=>{
     let element = document.getElementById("unread");
     let  element1 = document.getElementById("unread1");
-    let element2 = document.getElementById("unread2");
+  let element2 = document.getElementById("unread2");
   
-  
-    element.classList.remove("unread-notification");
-    element1.classList.remove("unread-notification");
-    element2.classList.remove("unread-notification");
+   
+  element.classList.remove("unread-notification");
+  element1.classList.remove("unread-notification");
+  element2.classList.remove("unread-notification");
+
+
+
+
     setCount(count-3)
     if(count<=0){
       setCount(0)
@@ -42,6 +48,23 @@ export default function Home(){
    
   
   };
+  const messageender=event=>{
+    event.currentTarget.classList.remove("message")
+    event.currentTarget.classList.add('message2');
+
+  }
+  
+  function calculateCount(){
+    
+
+      setCount(count+elem.length);
+    
+
+  };
+  useEffect(() => {
+    calculateCount();
+    
+  }, []);
    
   
      
@@ -49,7 +72,7 @@ export default function Home(){
             <div>
                 <div class="mainfile">
     <div>
-      <h1><b>Notifications {count}</b></h1>
+      <h1><b>Notifications <span class="counter">{count}</span></b></h1>
       <button onClick={handleButton} class="button1">Mark all as read</button>
 
     </div>
@@ -131,7 +154,7 @@ export default function Home(){
 
           <span class="text">5 days ago</span>
           <br/>
-          <span><p class="message">Hello thanks for setting up the Chess Club.I have been a member for a few weeks now i'm already having lots of fun and improving my game.</p></span>
+          <span><p onClick={messageender} class="message">Hello thanks for setting up the Chess Club.I have been a member for a few weeks now i'm already having lots of fun and improving my game.</p></span>
           <br/>
           
         </p>

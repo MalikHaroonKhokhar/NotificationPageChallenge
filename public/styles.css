@@ -3,11 +3,11 @@
 }
 .button1{
     line-height: 16px;
-     width: 200px;
+     
      font-size: 15pt;
      font-family: tahoma;
-     margin-top: 55px;
-     margin-right: 25rem;
+     margin-top: 3rem;
+     margin-right: 37rem;
      position:absolute;
      top:0;
      right:0;
@@ -62,7 +62,8 @@ body{
     line-height: 2;
 }
 .mainfile{
-    width: 800x;
+    width: 700px;
+
     margin-right: 2rem;
     background-color: white;
 
@@ -77,4 +78,22 @@ body{
 }
 .read-notification{
     background-color: white;
+}
+.counter{
+    
+    background-color: blue;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+    border-radius: 0.3rem;
+
+    
+}
+.message2{
+    border-width : 3px;
+    border-color: black;
+    border-style:solid;
+    opacity: 0.35;
+    
+
 }

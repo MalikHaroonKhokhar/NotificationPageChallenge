@@ -11,8 +11,5 @@ function App() {
 }
 
 export default App;
-function User(){
-  const [count ,counter]=useState(0);
-  
-}
+
 

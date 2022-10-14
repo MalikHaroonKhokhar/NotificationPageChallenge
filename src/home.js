@@ -1,38 +1,60 @@
 
+
 import React, { useState, useEffect } from 'react';
 
 
 import {App} from './App';
-const handleClick = event => {
+import User from './App';
+
+
+
+
+
+
+
+export default function Home(){
+  const [count,setCount] = useState(3);  
+  const handleClick = event => {
 
     
-  event.currentTarget.classList.toggle('read-notification');
-};
-const handleButton =event=>{
-  event.targe('unread-notification').classList.toggle('read-notification')
-
-};
-
-class Home extends React.Component{
+    event.currentTarget.classList.toggle('read-notification');
+   // event.currentTarget.classList.remove("umread-notifications")
+   setCount(count -1)
+   if(count<=0){
+    setCount(0)
+  }
+    
+  };
+  const handleButton =event=>{
+    let element = document.getElementById("unread");
+    let  element1 = document.getElementById("unread1");
+    let element2 = document.getElementById("unread2");
   
   
-
-
-    render(){
-     
-     
+    element.classList.remove("unread-notification");
+    element1.classList.remove("unread-notification");
+    element2.classList.remove("unread-notification");
+    setCount(count-3)
+    if(count<=0){
+      setCount(0)
+    }
       
-      
+   
+  
+  };
+   
+  
+     
       return(
             <div>
                 <div class="mainfile">
     <div>
-      <h1><b>Notifications</b></h1>
+      <h1><b>Notifications {count}</b></h1>
       <button onClick={handleButton} class="button1">Mark all as read</button>
 
     </div>
 
-    <div onClick={handleClick} class="unread-notification" >
+    <div id="unread" onClick={handleClick} class="unread-notification" >
       
       <span
         ><img
@@ -54,7 +76,7 @@ class Home extends React.Component{
       </div>
       
     </div>
-    <div onClick={handleClick} class="unread-notification" >
+    <div id="unread1" onClick={handleClick} class="unread-notification" >
       <span
         ><img
           class="Images"
@@ -73,7 +95,7 @@ class Home extends React.Component{
 
       </div>
     </div>
-    <div onClick={handleClick} class="unread-notification">
+    <div id="unread2" onClick={handleClick} class="unread-notification">
       <span
         ><img
           class="Images"
@@ -179,7 +201,7 @@ class Home extends React.Component{
 
           <span class="text">2 weeks ago</span>
           <br/>
-         
+          
         </p>
       </div>
     </div>
@@ -189,5 +211,5 @@ class Home extends React.Component{
         )
     }
 
-}
-export default Home;
+
+

@@ -72,6 +72,9 @@ body{
 .unread-notification{
     background-color: lightcyan;
 }
+.unread-notification:hover{
+    cursor: pointer;
+}
 .read-notification{
     background-color: white;
 }
